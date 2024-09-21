@@ -37,6 +37,7 @@
     "drizzle-zod": "^0.5.1",
     "fabric": "^5.3.0-browser",
     "form-data": "^4.0.0",
+    "framer-motion": "^11.5.6",
     "hono": "^4.5.11",
     "jsdom": "^25.0.0",
     "lodash.debounce": "^4.0.8",

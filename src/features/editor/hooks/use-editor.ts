@@ -29,7 +29,7 @@ import {
 import { useClipboadrd } from "./use-clipboard";
 import { useHistory } from "./use-history";
 import { useHotKeys } from "./use-hotkeys";
-import { useWindowEvents } from "./use-window-events";
+// import { useWindowEvents } from "./use-window-events";
 import { useLoadState } from "./use-load-state";
 
 const buildEditor = ({
@@ -579,7 +579,7 @@ export const useEditor = ({
   const [strokeDashArray, setStrokeDashArray] =
     useState<number[]>(STROKE_DASH_ARRAY);
 
-  useWindowEvents();
+  // useWindowEvents();
   const { save, canRedo, canUndo, undo, redo, canvasHistory, setHistoryIndex } =
     useHistory({ canvas, saveCallback });
   const { copy, paste } = useClipboadrd({ canvas });

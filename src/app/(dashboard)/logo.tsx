@@ -15,7 +15,9 @@ export const Logo = () => {
         <div className="size-8 relative">
           <Image src="/logo.svg" alt="Image AI" fill />
         </div>
-        <h1 className={cn(font.className, "text-xl font-bold")}>Image AI</h1>
+        <h1 className={cn(font.className, "text-xl font-bold")}>
+          Vision Craft
+        </h1>
       </div>
     </Link>
   );

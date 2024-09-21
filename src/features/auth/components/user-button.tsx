@@ -3,11 +3,7 @@
 import { useSession, signOut } from "next-auth/react";
 import { CreditCard, Crown, Loader, LogOut } from "lucide-react";
 
-import { 
-  Avatar, 
-  AvatarFallback, 
-  AvatarImage
-} from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,12 +16,12 @@ export const UserButton = () => {
   const session = useSession();
 
   // const onClick = () => {
- 
+
   //   mutation.mutate();
   // };
 
   if (session.status === "loading") {
-    return <Loader className="size-4 animate-spin text-muted-foreground" />
+    return <Loader className="size-4 animate-spin text-muted-foreground" />;
   }
 
   if (session.status === "unauthenticated" || !session.data) {
@@ -62,7 +58,10 @@ export const UserButton = () => {
           Billing
         </DropdownMenuItem>
         <DropdownMenuSeparator /> */}
-        <DropdownMenuItem className="h-10" onClick={() => signOut()}>
+        <DropdownMenuItem
+          className="h-10"
+          onClick={() => signOut({ callbackUrl: "/sign-in" })}
+        >
           <LogOut className="size-4 mr-2" />
           Log out
         </DropdownMenuItem>
