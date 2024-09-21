@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1725952385250,
+      "tag": "0000_aberrant_triathlon",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1726038576025,
+      "tag": "0001_neat_living_lightning",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1726129561082,
+      "tag": "0002_cold_metal_master",
+      "breakpoints": true
+    }
+  ]
+}
