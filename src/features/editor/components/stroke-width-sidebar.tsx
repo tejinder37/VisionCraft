@@ -38,7 +38,7 @@ export const StrokeWidthSidebar = ({
   return (
     <aside
       className={cn(
-        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col",
+        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
         activeTool === "stroke-width" ? "visible" : "hidden"
       )}
     >
@@ -63,7 +63,7 @@ export const StrokeWidthSidebar = ({
             size="lg"
             className={cn(
               "w-full h-16 justify-start text-left",
-              JSON.stringify(typeValue) === `[]` && "border border-blue-500"
+              JSON.stringify(typeValue) === `[]` && "border border-orange-500"
             )}
             style={{
               padding: "8px 16px",
@@ -79,7 +79,7 @@ export const StrokeWidthSidebar = ({
             size="lg"
             className={cn(
               "w-full h-16 justify-start text-left",
-              JSON.stringify(typeValue) === `[5,5]` && "border border-blue-500"
+              JSON.stringify(typeValue) === `[5,5]` && "border border-orange-500"
             )}
             style={{
               padding: "8px 16px",

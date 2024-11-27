@@ -85,18 +85,30 @@ export const Editor = ({ initialData }: EditorProps) => {
     };
   }, [init]);
   return (
-    <div className="h-full flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Navbar
         id={initialData.id}
         editor={editor}
         activeTool={activeTool}
         onChangeActiveTool={onChangeActiveTool}
       />
-      <div className="absolute h-[calc(100%-68px)] w-full top-[68px] flex">
-        <Sidebar
-          activeTool={activeTool}
-          onChangeActiveTool={onChangeActiveTool}
-        />
+      <div className="h-[calc(100dvh-57px)] w-full flex">
+        <main className="bg-muted  flex-1 overflow-auto relative justify-between flex flex-col">
+          <Toolbar
+            editor={editor}
+            activeTool={activeTool}
+            onChangeActiveTool={onChangeActiveTool}
+            key={JSON.stringify(editor?.canvas.getActiveObject())}
+          />
+          <div
+            className="flex-1 h-[calc(100%-124px)] bg-muted"
+            ref={containerRef}
+          >
+            <canvas ref={canvasRef} />
+          </div>
+          <Footer editor={editor} />
+        </main>
+
         <ShapeSidebar
           editor={editor}
           activeTool={activeTool}
@@ -167,21 +179,10 @@ export const Editor = ({ initialData }: EditorProps) => {
           activeTool={activeTool}
           onChangeActiveTool={onChangeActiveTool}
         />
-        <main className="bg-muted  flex-1 overflow-auto relative flex flex-col">
-          <Toolbar
-            editor={editor}
-            activeTool={activeTool}
-            onChangeActiveTool={onChangeActiveTool}
-            key={JSON.stringify(editor?.canvas.getActiveObject())}
-          />
-          <div
-            className="flex-1 h-[calc(100%-124px)] bg-muted"
-            ref={containerRef}
-          >
-            <canvas ref={canvasRef} />
-          </div>
-          <Footer editor={editor} />
-        </main>
+        <Sidebar
+          activeTool={activeTool}
+          onChangeActiveTool={onChangeActiveTool}
+        />
       </div>
     </div>
   );

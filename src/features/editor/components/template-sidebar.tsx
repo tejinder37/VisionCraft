@@ -103,7 +103,7 @@ export const TemplateSidebar: React.FC<TemplateSidebarProps> = ({
   return (
     <aside
       className={cn(
-        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col",
+        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
         activeTool === "templates" ? "visible" : "hidden"
       )}
     >

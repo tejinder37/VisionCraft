@@ -31,21 +31,21 @@ export const SubscriptionModal = () => {
         <Separator />
         <ul className="space-y-2">
           <li className="flex items-center">
-            <CheckCircle2 className="size-5 mr-2 fill-blue-500 text-white" />
+            <CheckCircle2 className="size-5 mr-2 fill-orange-500 text-white" />
             <p className="text-sm text-muted-foreground">Unlimited projects</p>
           </li>
           <li className="flex items-center">
-            <CheckCircle2 className="size-5 mr-2 fill-blue-500 text-white" />
+            <CheckCircle2 className="size-5 mr-2 fill-orange-500 text-white" />
             <p className="text-sm text-muted-foreground">Unlimited templates</p>
           </li>
           <li className="flex items-center">
-            <CheckCircle2 className="size-5 mr-2 fill-blue-500 text-white" />
+            <CheckCircle2 className="size-5 mr-2 fill-orange-500 text-white" />
             <p className="text-sm text-muted-foreground">
               AI Background removal
             </p>
           </li>
           <li className="flex items-center">
-            <CheckCircle2 className="size-5 mr-2 fill-blue-500 text-white" />
+            <CheckCircle2 className="size-5 mr-2 fill-orange-500 text-white" />
             <p className="text-sm text-muted-foreground">AI Image generation</p>
           </li>
         </ul>

@@ -16,8 +16,8 @@ const EditorProjectIdPage = ({ params }: EditorProjectIdPageProps) => {
 
   if (isLoading || !data) {
     return (
-      <div className="h-full flex flex-col items-center justify-center">
-        <Loader className="size-6 animate-spin text-muted-foreground" />
+      <div className="h-[100dvh] flex items-center justify-center">
+        <Loader className="size-10 animate-spin text-muted-foreground" />
       </div>
     );
   }

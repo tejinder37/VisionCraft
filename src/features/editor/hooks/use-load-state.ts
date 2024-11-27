@@ -25,7 +25,7 @@ export const useLoadState = ({
       const data = JSON.parse(initialState?.current);
 
       canvas.loadFromJSON(data, () => {
-        const currentState = JSON.stringify(canvas.toJSON(JSON_KEYS));
+        const currentState = JSON.stringify(canvas?.toJSON(JSON_KEYS));
 
         canvasHistory.current = [currentState];
         setHistoryIndex(0);

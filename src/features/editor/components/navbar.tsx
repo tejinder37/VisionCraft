@@ -66,7 +66,7 @@ export const Navbar = ({
     },
   });
   return (
-    <nav className="w-full flex items-center p-4 h-[68px] gap-x-8 border-b lg:pl-[34px]">
+    <nav className="w-full flex items-center p-2 min-h-[55px] gap-x-8 border-b lg:pl-[34px]">
       <Logo />
       <div className="w-full flex items-center gap-x-1 h-full">
         <DropdownMenu modal={false}>
@@ -150,7 +150,7 @@ export const Navbar = ({
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <Button size="sm" variant="ghost">
-                Export
+                <span className="max-lg:hidden">Export</span>
                 <Download className="size-4 ml-2" />
               </Button>
             </DropdownMenuTrigger>

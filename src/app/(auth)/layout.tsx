@@ -1,11 +1,12 @@
 import React from "react";
 
+import bg1 from '@/public/bg1.webp'
 interface AuthLayoutProps {
   children: React.ReactNode;
 }
 const AuthLayout = ({ children }: AuthLayoutProps) => {
   return (
-    <div className="bg-[url(/bg1.webp)]  bg-top bg-cover h-full w-full flex flex-col">
+    <div  style={{backgroundImage: `url(${bg1.src})`}} className="bg-no-repeat bg-top bg-cover h-[100dvh] w-full flex flex-col">
       <div className=" z-[4] h-full w-full flex flex-col items-center justify-center">
         <div className="md:h-auto md:w-[420px]">{children}</div>
       </div>

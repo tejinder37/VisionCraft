@@ -34,7 +34,7 @@ export const Hint = ({
           sideOffset={sideOffset}
           alignOffset={alignOffset}
         >
-          <p className="font-semibold capitalize">{label}</p>
+          <p className="font-semibold capitalize text-[0.8rem]">{label}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

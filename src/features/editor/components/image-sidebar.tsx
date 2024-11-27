@@ -67,7 +67,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
   return (
     <aside
       className={cn(
-        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col",
+        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
         activeTool === "images" ? "visible" : "hidden"
       )}
     >
@@ -76,7 +76,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
         description="Search and add images to your canvas"
       />
 
-      <div className="p-4 space-y-4 space-x-3">
+      <div className="p-4 space-y-4">
         <form onSubmit={handleSearch} className="flex space-x-2">
           <Input
             type="text"
@@ -88,13 +88,13 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
           <Button
             type="submit"
             size="default"
-            className="bg-blue-500 ring-2 ring-blue-600 ring-offset-2 hover:bg-blue-500  hover:opacity-75"
+            className="bg-orange-500 ring-2 ring-orange-600 ring-offset-2 hover:bg-orange-500  hover:opacity-75"
           >
             <Search className="size-4" />
           </Button>
         </form>
 
-        <div className="flex space-x-2">
+        <div className="flex space-x-2  ">
           <Select value={color} onValueChange={setColor}>
             <SelectTrigger className="w-1/2">
               <SelectValue placeholder="Color" />
@@ -129,7 +129,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
         </div>
 
         <div className="w-full">
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 ring-2 ring-blue-600 ring-offset-2">
+          <Button className="w-full bg-orange-600 hover:bg-orange-700 ring-2 ring-orange-600 ring-offset-2">
             <label
               htmlFor="image-upload"
               className="cursor-pointer w-full inline-block"
@@ -197,7 +197,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
           <Button
             onClick={() => setPage((prev) => Math.max(1, prev - 1))}
             disabled={page === 1 && isLoading}
-            className="bg-blue-500 hover:opacity-75 ring-2 ring-blue-600 ring-offset-2"
+            className="bg-orange-500 hover:opacity-75 ring-2 ring-orange-600 ring-offset-2"
           >
             Previous
           </Button>
@@ -207,7 +207,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
           <Button
             onClick={() => setPage((prev) => prev + 1)}
             disabled={page === data.total_pages}
-            className="bg-blue-500 hover:opacity-75 ring-2 ring-blue-600 ring-offset-2"
+            className="bg-orange-500 hover:opacity-75 ring-2 ring-orange-600 ring-offset-2"
           >
             Next
           </Button>
