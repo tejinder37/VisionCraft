@@ -22,7 +22,7 @@ export const RemoveBgSidebar = ({
   editor,
 }: RemoveBgSidebarProps) => {
   const mutation = useRemoveBackground();
-  const { shouldBlock, triggerPaywall } = usePaywall();
+  // const { shouldBlock, triggerPaywall } = usePaywall();
   const selectedObject = editor?.selectedObjects[0];
   //@ts-ignore
   const imageSrc = selectedObject?._originalElement?.currentSrc;
@@ -31,10 +31,10 @@ export const RemoveBgSidebar = ({
   };
   const onClick = () => {
     // TODO: Block the paywall
-    if (shouldBlock) {
-      triggerPaywall();
-      return;
-    }
+    // if (shouldBlock) {
+    //   // triggerPaywall();
+    //   return;
+    // }
 
     if (!imageSrc || !editor) return;
     mutation.mutate(
@@ -61,7 +61,7 @@ export const RemoveBgSidebar = ({
   return (
     <aside
       className={cn(
-        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
+        "bg-white border-r w-[360px]  flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
         activeTool === "remove-bg" ? "visible" : "hidden"
       )}
     >

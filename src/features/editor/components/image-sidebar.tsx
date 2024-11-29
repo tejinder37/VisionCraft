@@ -67,7 +67,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
   return (
     <aside
       className={cn(
-        "bg-white relative border-r z-[40] w-[360px] h-full flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
+        "bg-white border-r w-[360px]  flex flex-col fixed  h-[calc(100dvh_-_57px)] bottom-0 right-[79px] z-40",
         activeTool === "images" ? "visible" : "hidden"
       )}
     >
@@ -94,7 +94,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
           </Button>
         </form>
 
-        <div className="flex space-x-2  ">
+        {/* <div className="flex space-x-2  ">
           <Select value={color} onValueChange={setColor}>
             <SelectTrigger className="w-1/2">
               <SelectValue placeholder="Color" />
@@ -126,7 +126,7 @@ export const ImageSidebar: React.FC<ImageSidebarProps> = ({
               <SelectItem value="squarish">Squarish</SelectItem>
             </SelectContent>
           </Select>
-        </div>
+        </div> */}
 
         <div className="w-full">
           <Button className="w-full bg-orange-600 hover:bg-orange-700 ring-2 ring-orange-600 ring-offset-2">
