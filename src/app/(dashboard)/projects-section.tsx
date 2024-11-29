@@ -29,6 +29,7 @@ import logo from '@/public/logo.svg'
 import bg from '@/public/bg.jpg'
 import bg1 from '@/public/bg1.webp'
 import bg2 from '@/public/bg2.jpg'
+import bg3 from '@/public/bg3.jpg'
 export const ProjectsSection = () => {
   const [ConfirmDialog, confirm] = useConfirm(
     "Are you sure?",
@@ -87,15 +88,15 @@ export const ProjectsSection = () => {
 
           <div className="space-y-4">
             <ConfirmDialog />
-            <h3 className="font-semibold text-lg">Recent Projects</h3>
-            <div className="overflow-x-auto bg-white rounded-xl">
+            <h3 className="font-semibold text-[2rem] text-center text-orange-500 bg-gray-100 rounded-lg p-3">Recent Projects</h3>
+            <div className="overflow-x-auto bg-gray-50 rounded-xl">
 
               <Table>
                 <TableBody>
                   {data.pages.map((group, i) => (
                     <React.Fragment key={i}>
                       {group.data.map((project) => (
-                        <TableRow key={project.id} className="bg-gray-200 border-b-4 border-white">
+                        <TableRow key={project.id} className="border-b border-gray-300">
                           <TableCell
                             className="font-medium flex items-center gap-x-2 cursor-pointer"
                             onClick={() => router.push(`/editor/${project.id}`)}
@@ -159,7 +160,7 @@ export const ProjectsSection = () => {
             {hasNextPage && (
               <div className="w-full flex items-center justify-center pt-4">
                 <Button
-                  variant="ghost"
+                className="bg-gray-700 text-white"
                   onClick={() => {
                     fetchNextPage();
                   }}
@@ -176,7 +177,7 @@ export const ProjectsSection = () => {
             <div className="flex-[1_1_500px]">
               <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
                 <div className="cardImage max-h-[300px] h-full">
-                  <Image src={bg} alt="cardImage webHome page" className="block h-full w-full object-cover" />
+                  <Image src={bg3} alt="cardImage webHome page" className="block h-full w-full object-cover" />
                 </div>
                 <div className="openTemplate bg-white rounded-xl py-2 px-3 absolute bottom-4 right-4 flex justify-center items-center gap-2">
                   <Image src={logo} alt="logo" className="h-4 w-4 object-contain"/>

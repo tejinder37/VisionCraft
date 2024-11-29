@@ -195,7 +195,7 @@ export const Toolbar = ({
               variant="ghost"
               className={cn(activeTool === "stroke-width" && "bg-gray-100")}
             >
-              <BsBorderWidth strokeWidth={1}  className="size-4" />
+              <BsBorderWidth strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -215,7 +215,7 @@ export const Toolbar = ({
               )}
             >
               <div className="max-w-[100px] truncate">
-              <CaseSensitive strokeWidth={1} />
+              <CaseSensitive strokeWidth={1.7} />
               </div>              {/* <ChevronDown className="size-4 ml-2 shrink-0" /> */}
             </Button>
           </Hint>
@@ -230,7 +230,7 @@ export const Toolbar = ({
               variant="ghost"
               className={cn(properties?.fontWeight > 500 && "bg-gray-100")}
             >
-              <BoldIcon strokeWidth={1}  className="size-4" />
+              <BoldIcon strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -246,7 +246,7 @@ export const Toolbar = ({
                 properties?.fontStyle === "italic" && "bg-gray-100"
               )}
             >
-              <LucideItalic strokeWidth={1}  className="size-4" />
+              <LucideItalic strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -260,7 +260,7 @@ export const Toolbar = ({
               variant="ghost"
               className={cn(properties?.fontUnderline && "bg-gray-100")}
             >
-              <Underline strokeWidth={1}  className="size-4" />
+              <Underline strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -274,7 +274,7 @@ export const Toolbar = ({
               variant="ghost"
               className={cn(properties?.fontLineThrough && "bg-gray-100")}
             >
-              <Strikethrough strokeWidth={1}  className="size-4" />
+              <Strikethrough strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -283,7 +283,7 @@ export const Toolbar = ({
           <Hint label="Align" side="bottom" sideOffset={5}  >
             <div>
               <h4 className="text-[1rem]">
-                <LetterText strokeWidth={1}  />
+                <LetterText strokeWidth={1.7}  />
               </h4>
               <div className="absolute top-0 left-[20px] overflow-hidden h-0 group-hover:h-auto hover:h-auto bg-white px-1 flex justify-center items-center gap-2">
                 <Hint label="Align left" side="bottom" sideOffset={5} >
@@ -293,7 +293,7 @@ export const Toolbar = ({
                     variant="ghost"
                     className={cn(properties?.textAlign == "left" && "bg-gray-100")}
                   >
-                    <AlignLeft className="size-4" />
+                    <AlignLeft className="size-4 text-black" />
                   </Button>
                 </Hint>
                 <Hint label="Align center" side="bottom" sideOffset={5} >
@@ -303,7 +303,7 @@ export const Toolbar = ({
                     variant="ghost"
                     className={cn(properties?.textAlign == "center" && "bg-gray-100")}
                   >
-                    <AlignCenter className="size-4" />
+                    <AlignCenter className="size-4 text-black" />
                   </Button>
                 </Hint>
                 <Hint label="Align right" side="bottom" sideOffset={5} >
@@ -313,7 +313,7 @@ export const Toolbar = ({
                     variant="ghost"
                     className={cn(properties?.textAlign == "right" && "bg-gray-100")}
                   >
-                    <AlignRight className="size-4" />
+                    <AlignRight className="size-4 text-black" />
                   </Button>
                 </Hint>
               </div>
@@ -327,7 +327,7 @@ export const Toolbar = ({
           <Hint label="Size" side="bottom" sideOffset={5}  >
             <div>
               <h4 className="text-[1rem]">
-                <ALargeSmall  strokeWidth={1} />
+                <ALargeSmall  strokeWidth={1.7} />
               </h4>
               <div className="absolute top-0 left-[20px] overflow-hidden h-0 group-hover:h-[40px] hover:h-[40px]">
                 <FontSizeInput
@@ -351,7 +351,7 @@ export const Toolbar = ({
               variant="ghost"
               className={cn(activeTool === "filter" && "bg-gray-100")}
             >
-              <TbColorFilter strokeWidth={1}  className="size-4" />
+              <TbColorFilter strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -365,7 +365,7 @@ export const Toolbar = ({
               variant="ghost"
               className={cn(activeTool === "remove-bg" && "bg-gray-100")}
             >
-              <SquareSplitHorizontal strokeWidth={1}  className="size-4" />
+              <SquareSplitHorizontal strokeWidth={1.7}  className="size-4 text-black" />
             </Button>
           </Hint>
         </div>
@@ -379,7 +379,7 @@ export const Toolbar = ({
             size="icon"
             variant="ghost"
           >
-            <ArrowUp strokeWidth={1}  className="size-4" />
+            <ArrowUp strokeWidth={1.7}  className="size-4 text-black" />
           </Button>
         </Hint>
       </div>
@@ -392,7 +392,7 @@ export const Toolbar = ({
             size="icon"
             variant="ghost"
           >
-            <ArrowDown strokeWidth={1}  className="size-4" />
+            <ArrowDown strokeWidth={1.7}  className="size-4 text-black" />
           </Button>
         </Hint>
       </div>
@@ -406,7 +406,7 @@ export const Toolbar = ({
             variant="ghost"
             className={cn(activeTool === "opacity" && "bg-gray-100")}
           >
-            <RxTransparencyGrid strokeWidth={1}  className="size-4" />
+            <RxTransparencyGrid strokeWidth={1.7}  className="size-4 text-black" />
           </Button>
         </Hint>
       </div>
@@ -419,7 +419,7 @@ export const Toolbar = ({
             size="icon"
             variant="ghost"
           >
-            <Trash strokeWidth={1}  className="size-4" />
+            <Trash strokeWidth={1.7}  className="size-4 text-black" />
           </Button>
         </Hint>
       </div>
@@ -433,7 +433,7 @@ export const Toolbar = ({
             size="icon"
             variant="ghost"
           >
-            <Copy strokeWidth={1}  className="size-4" />
+            <Copy strokeWidth={1.7}  className="size-4 text-black" />
           </Button>
         </Hint>
       </div>

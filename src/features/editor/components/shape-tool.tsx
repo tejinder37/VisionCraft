@@ -17,9 +17,9 @@ export const ShapeTool = ({
   label,
 }: ShapeToolProps) => {
   return (
-    <button onClick={onClick} className="aspect-square border rounded-md p-5">
-      <h1>{label}</h1>
-      <Icon className={cn("h-full w-full", iconClassName)} />
+    <button onClick={onClick} className="aspect-square border gap-4 flex flex-col justify-center items-center flex-[1_1_100px] rounded-md py-5">
+      <h5 className="text-[0.7rem] font-normal">{label}</h5>
+      <Icon className={cn("h-12 w-12", iconClassName)} />
     </button>
   );
 };

@@ -98,7 +98,7 @@ export const ShapeSidebar = ({
         description="Add shapes to your canvas"
       />
       <ScrollArea className="flex-1">
-        <div className="grid grid-cols-3 gap-4 p-4">
+        <div className="flex-wrap gap-4 p-4 flex items-stretch justify-center">
           {shapes.map((shape, index) => (
             <ShapeTool
               key={index}
