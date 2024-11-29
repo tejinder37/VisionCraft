@@ -2,8 +2,11 @@ import { fabric } from "fabric";
 import { useCallback, useState, useMemo, useRef } from "react";
 import { useAutoResize } from "./use-auto-resize";
 import {
+  ARROW_OPTIONS,
   BuildEditorProps,
   CIRCLE_OPTIONS,
+  CLOUD_OPTIONS,
+  CROSS_OPTIONS,
   DIANMOND_OPTIONS,
   Editor,
   EditorHookProps,
@@ -11,12 +14,18 @@ import {
   FONT_FAMILY,
   FONT_SIZE,
   FONT_WEIGHT,
+  HEART_OPTIONS,
+  HEXAGON_OPTIONS,
   JSON_KEYS,
+  PARALLELOGRAM_OPTIONS,
+  PENTAGON_OPTIONS,
   RECTANGLE_OPTIONS,
+  STAR_OPTIONS,
   STROKE_COLOR,
   STROKE_DASH_ARRAY,
   STROKE_WIDTH,
   TEXT_OPTIONS,
+  TRAPEZOID_OPTIONS,
   TRIANGLE_OPTIONS,
 } from "../types";
 import { useCanvasEvents } from "./use-canvas-events";
@@ -181,6 +190,7 @@ const buildEditor = ({
     onRedo: () => redo(),
     onCopy: () => copy(),
     onPaste: () => paste(),
+
     changeImageFilter: (value: string) => {
       const objects = canvas.getActiveObjects();
       objects.forEach((object) => {
@@ -476,6 +486,145 @@ const buildEditor = ({
 
       addToCanvas(object);
     },
+    addPentagon: () => {
+      const pentagon = new fabric.Path(
+        "M 50 0 L 95 35 L 85 90 L 15 90 L 5 35 Z",
+        {
+          ...PENTAGON_OPTIONS,
+          fill: fillColor,
+          stroke: strokeColor,
+          strokeWidth: strokeWidth,
+          strokeDashArray: strokeDashArray,
+        }
+      );
+      addToCanvas(pentagon);
+    },
+
+    addHexagon: () => {
+      const hexagon = new fabric.Path(
+        "M 50 0 L 93 25 L 93 75 L 50 100 L 7 75 L 7 25 Z",
+        {
+          ...HEXAGON_OPTIONS,
+          fill: fillColor,
+          stroke: strokeColor,
+          strokeWidth: strokeWidth,
+          strokeDashArray: strokeDashArray,
+        }
+      );
+      addToCanvas(hexagon);
+    },
+
+    addStar: () => {
+      const points = [];
+      const { numPoints, innerRadius, outerRadius } = STAR_OPTIONS;
+      for (let i = 0; i < numPoints * 2; i++) {
+        const radius = i % 2 === 0 ? outerRadius : innerRadius;
+        const angle = (i * Math.PI) / numPoints;
+        points.push({
+          x: radius * Math.sin(angle),
+          y: -radius * Math.cos(angle),
+        });
+      }
+      const star = new fabric.Polygon(points, {
+        ...STAR_OPTIONS,
+        fill: fillColor,
+        stroke: strokeColor,
+        strokeWidth: strokeWidth,
+        strokeDashArray: strokeDashArray,
+      });
+      addToCanvas(star);
+    },
+
+    addArrow: () => {
+      const arrow = new fabric.Path(
+        "M 0 40 L 160 40 L 160 20 L 200 50 L 160 80 L 160 60 L 0 60 Z",
+        {
+          ...ARROW_OPTIONS,
+          fill: fillColor,
+          stroke: strokeColor,
+          strokeWidth: strokeWidth,
+          strokeDashArray: strokeDashArray,
+        }
+      );
+      addToCanvas(arrow);
+    },
+
+    addParallelogram: () => {
+      const points = [
+        { x: 50, y: 0 },
+        { x: 200, y: 0 },
+        { x: 150, y: 100 },
+        { x: 0, y: 100 },
+      ];
+      const parallelogram = new fabric.Polygon(points, {
+        ...PARALLELOGRAM_OPTIONS,
+        fill: fillColor,
+        stroke: strokeColor,
+        strokeWidth: strokeWidth,
+        strokeDashArray: strokeDashArray,
+      });
+      addToCanvas(parallelogram);
+    },
+
+    addTrapezoid: () => {
+      const points = [
+        { x: 50, y: 0 },
+        { x: 150, y: 0 },
+        { x: 200, y: 100 },
+        { x: 0, y: 100 },
+      ];
+      const trapezoid = new fabric.Polygon(points, {
+        ...TRAPEZOID_OPTIONS,
+        fill: fillColor,
+        stroke: strokeColor,
+        strokeWidth: strokeWidth,
+        strokeDashArray: strokeDashArray,
+      });
+      addToCanvas(trapezoid);
+    },
+
+    addCross: () => {
+      const cross = new fabric.Path(
+        "M 40 0 L 60 0 L 60 40 L 100 40 L 100 60 L 60 60 L 60 100 L 40 100 L 40 60 L 0 60 L 0 40 L 40 40 Z",
+        {
+          ...CROSS_OPTIONS,
+          fill: fillColor,
+          stroke: strokeColor,
+          strokeWidth: strokeWidth,
+          strokeDashArray: strokeDashArray,
+        }
+      );
+      addToCanvas(cross);
+    },
+
+    addHeart: () => {
+      const heart = new fabric.Path(
+        "M 50 100 C 100 80 120 40 50 0 C -20 40 0 80 50 100",
+        {
+          ...HEART_OPTIONS,
+          fill: fillColor,
+          stroke: strokeColor,
+          strokeWidth: strokeWidth,
+          strokeDashArray: strokeDashArray,
+        }
+      );
+      addToCanvas(heart);
+    },
+
+    addCloud: () => {
+      const cloud = new fabric.Path(
+        "M 25 60 C -10 60 -10 30 10 30 C 10 10 40 10 50 30 C 60 10 90 10 90 30 C 110 30 110 60 75 60 Z",
+        {
+          ...CLOUD_OPTIONS,
+          fill: fillColor,
+          stroke: strokeColor,
+          strokeWidth: strokeWidth,
+          strokeDashArray: strokeDashArray,
+        }
+      );
+      addToCanvas(cloud);
+    },
+
     addDiamond: () => {
       const HEIGHT = DIANMOND_OPTIONS.height;
       const WIDTH = DIANMOND_OPTIONS.width;

@@ -105,6 +105,7 @@ export type ActiveTool =
   | "settings"
   | "ai"
   | "remove-bg"
+  | "pen"
   | "templates";
 
 export const FILL_COLOR = "rgba(0,0,0,1)";
@@ -162,17 +163,129 @@ export const TEXT_OPTIONS = {
   fontfamily: FONT_FAMILY,
 };
 
+export const PENTAGON_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 400,
+  angle: 0,
+};
+
+export const HEXAGON_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 400,
+  angle: 0,
+};
+
+export const STAR_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 400,
+  angle: 0,
+  numPoints: 5,
+  innerRadius: 100,
+  outerRadius: 200,
+};
+
+export const ARROW_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 200,
+  angle: 0,
+};
+
+export const ELLIPSE_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  rx: 200,
+  ry: 100,
+  angle: 0,
+};
+
+export const PARALLELOGRAM_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 200,
+  skewX: 20,
+  angle: 0,
+};
+
+export const TRAPEZOID_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 200,
+  angle: 0,
+};
+
+export const CROSS_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 400,
+  angle: 0,
+};
+
+export const HEART_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 400,
+  angle: 0,
+};
+
+export const CLOUD_OPTIONS = {
+  left: 100,
+  top: 100,
+  fill: FILL_COLOR,
+  stroke: STROKE_COLOR,
+  strokeWidth: STROKE_WIDTH,
+  width: 400,
+  height: 200,
+  angle: 0,
+};
 export interface EditorHookProps {
-  defaultState?:string;
-  defaultWidth? :number, 
-  defaultHeight? :number, 
+  defaultState?: string;
+  defaultWidth?: number;
+  defaultHeight?: number;
   clearSelectionCallback?: () => void;
   saveCallback?: (value: {
     json: string;
     height: number;
     width: number;
   }) => void;
-  
 }
 
 export type BuildEditorProps = {
@@ -242,6 +355,16 @@ export interface Editor {
   addTriangle: () => void;
   addInverseTriangle: () => void;
   addDiamond: () => void;
+  addPentagon: () => void;
+  addHexagon: () => void;
+  addStar: () => void;
+  addArrow: () => void;
+  // addEllipse: () => void;
+  addParallelogram: () => void;
+  addTrapezoid: () => void;
+  addCross: () => void;
+  addHeart: () => void;
+  addCloud: () => void;
   getActiveFillColor: () => string;
   getActiveStrokeColor: () => string;
   getActiveTextAlign: () => string;
