@@ -82,8 +82,8 @@ export const ProjectsSection = () => {
   }
   return (
     <>
-      <div className="flex justify-center items-start max-lg:flex-col flex-wrap gap-6">
-        <div className="flex-[1_1_350px]">
+      <div className="flex justify-center items-start flex-col flex-wrap gap-6">
+        <div className="flex-[1_1_0%] w-full">
 
           <div className="space-y-4">
             <ConfirmDialog />
@@ -173,7 +173,7 @@ export const ProjectsSection = () => {
         </div>
         <div className="flex-[3_1_500px]">
           <div className="flex justify-center items-stretch gap-6 flex-wrap">
-            <div className="flex-[1_1_300px]">
+            <div className="flex-[1_1_500px]">
               <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
                 <div className="cardImage max-h-[300px] h-full">
                   <Image src={bg} alt="cardImage webHome page" className="block h-full w-full object-cover" />
@@ -184,7 +184,7 @@ export const ProjectsSection = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-[1_1_300px]">
+            <div className="flex-[1_1_500px]">
               <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
                 <div className="cardImage max-h-[300px] h-full">
                   <Image src={bg1} alt="cardImage webHome page" className="block h-full w-full object-cover" />
@@ -195,43 +195,10 @@ export const ProjectsSection = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-[1_1_300px]">
+            <div className="flex-[1_1_500px]">
               <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
                 <div className="cardImage max-h-[300px] h-full">
                   <Image src={bg2} alt="cardImage webHome page" className="block h-full w-full object-cover" />
-                </div>
-                <div className="openTemplate bg-white rounded-xl py-2 px-3 absolute bottom-4 right-4 flex justify-center items-center gap-2">
-                  <Image src={logo} alt="logo" className="h-4 w-4 object-contain"/>
-                  <span className="text-[0.8rem] font-medium">Open</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex-[1_1_300px]">
-              <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
-                <div className="cardImage max-h-[300px] h-full">
-                  <Image src={bg1} alt="cardImage webHome page" className="block h-full w-full object-cover" />
-                </div>
-                <div className="openTemplate bg-white rounded-xl py-2 px-3 absolute bottom-4 right-4 flex justify-center items-center gap-2">
-                  <Image src={logo} alt="logo" className="h-4 w-4 object-contain"/>
-                  <span className="text-[0.8rem] font-medium">Open</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex-[1_1_300px]">
-              <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
-                <div className="cardImage max-h-[300px] h-full">
-                  <Image src={bg2} alt="cardImage webHome page" className="block h-full w-full object-cover" />
-                </div>
-                <div className="openTemplate bg-white rounded-xl py-2 px-3 absolute bottom-4 right-4 flex justify-center items-center gap-2">
-                  <Image src={logo} alt="logo" className="h-4 w-4 object-contain"/>
-                  <span className="text-[0.8rem] font-medium">Open</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex-[1_1_300px]">
-              <div className="card overflow-hidden relative z-0 rounded-xl h-full border-t shadow">
-                <div className="cardImage max-h-[300px] h-full">
-                  <Image src={bg} alt="cardImage webHome page" className="block h-full w-full object-cover" />
                 </div>
                 <div className="openTemplate bg-white rounded-xl py-2 px-3 absolute bottom-4 right-4 flex justify-center items-center gap-2">
                   <Image src={logo} alt="logo" className="h-4 w-4 object-contain"/>
